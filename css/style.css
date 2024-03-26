@@ -1,0 +1,33 @@
+#grid-container {
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    background-color: bisque;
+    gap: 5px;
+    text-align: center;
+}
+
+#grid-container>div {
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+#header,
+#footer {
+    grid-column: 1/4;
+}
+
+#navbar,
+#main,
+#aside {
+    height: 500px;
+}
+
+@media (max-width:800px) {
+    #grid-container>* {
+        grid-column: 1/4;
+    }
+
+    #navbar,#aside{
+        height: auto;
+    }
+}
